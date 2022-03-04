@@ -1,0 +1,12 @@
+version: '2'
+services:
+  smbd:
+    image: 'ubuntu:20.04'
+    build: https://github.com/hipsterino/portainer-samba-dc.git
+    container_name: samba-dc
+    restart: always
+    network_mode: host
+    environment:
+      - TZ=Europ/Berlin
+    volumes:
+      - samba-dc:/etc/samba
