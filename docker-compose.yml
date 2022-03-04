@@ -9,4 +9,6 @@ services:
     environment:
       - TZ=Europ/Berlin
     volumes:
-      - /samba-dc
+      - /samba-dc:/etc/samba
+      - /samba-dc:/var/log/samba
+      - /samba-dc:/var/cache/samba
