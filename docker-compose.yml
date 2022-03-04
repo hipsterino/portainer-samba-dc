@@ -1,8 +1,8 @@
 version: '2'
 services:
   smbd:
-    image: 'ubuntu:20.04'
-    build: https://github.com/hipsterino/portainer-samba-dc
+    build: 
+      context: 'https://raw.githubusercontent.com/hipsterino/portainer-samba-dc/main/Dockerfile'
     container_name: samba-dc
     restart: always
     network_mode: host
